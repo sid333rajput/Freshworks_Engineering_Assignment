@@ -1,0 +1,22 @@
+These are the commands to use the code file.
+
+Run the MODULE of MAIN FILE and import mainfile as a library 
+
+PYTHON COMMANDS TO USE THE PROGRAM.
+import code as x
+x.create("sid",3)
+x.create("code",44,999)  
+x.read("sid")
+x.read("code")
+x.create("sid",333)
+x.modify("sid",123)
+x.delete("sid")
+
+
+One can access these using multiple threads like
+t1=Thread(target=(create or read or delete),args=(key_name,value,timeout)) #as per the operation
+t1.start()
+t1.sleep()
+t2=Thread(target=(create or read or delete),args=(key_name,value,timeout)) #as per the operation
+t2.start()
+t2.sleep()
